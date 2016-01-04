@@ -1,0 +1,20 @@
+# usage of QuickAdapter ---
+#
+#        if (adapter == null)
+#            adapter = new QuickAdapter<Status>(getSherlockActivity(), R.layout.tweet) {
+#                @Override
+#                protected void convert(BaseAdapterHelper helper, Status status) {
+#                    boolean isRetweet = status.isRetweet();
+#                    if (isRetweet) status = status.getRetweetedStatus();
+#                    helper.setText(tweetText, status.getText())
+#                            .setVisible(tweetRT, isRetweet)
+#                            .setText(tweetName, status.getUser().getName())
+ #                           .setText(tweetDate, dateFormat.format(status.getCreatedAt()))
+#                            .setImageUrl(tweetAvatar, status.getUser().getProfileImageURL())
+#                            .linkify(tweetText);
+#                }
+#            };
+#        listView.setAdapter(adapter);
+# usage of EndListener---
+# listView.setOnEndOfListListener(this);
+
